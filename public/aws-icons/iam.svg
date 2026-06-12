@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="iam-grad">
+            <stop stop-color="#BF0683" offset="0%"></stop>
+            <stop stop-color="#DD344C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="url(#iam-grad)" x="0" y="0" width="80" height="80"></rect>
+        <g transform="translate(13, 10)" fill="#FFFFFF">
+            <!-- IAM icon: person + shield/lock -->
+            <!-- Person (user) shape -->
+            <circle cx="27" cy="18" r="7"/>
+            <path d="M12,42 C12,33.7 18.7,27 27,27 C35.3,27 42,33.7 42,42 L42,44 L12,44 Z"/>
+            <!-- Shield/lock to the right top -->
+            <path d="M44,12 L52,14 L52,22 C52,26 48,29 44,30 C40,29 36,26 36,22 L36,14 Z" stroke="#FFFFFF" stroke-width="1.5" fill="rgba(255,255,255,0.3)"/>
+            <!-- Lock body on shield -->
+            <rect x="40" y="21" width="8" height="6" rx="1" fill="#FFFFFF"/>
+            <path d="M42,21 L42,19 C42,17.3 45,17.3 45,19 L45,21" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+            <circle cx="44" cy="24" r="1" fill="rgba(200,50,70,1)"/>
+        </g>
+    </g>
+</svg>

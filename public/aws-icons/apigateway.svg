@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="apigw-grad">
+            <stop stop-color="#8C1A6A" offset="0%"></stop>
+            <stop stop-color="#BF0683" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="url(#apigw-grad)" x="0" y="0" width="80" height="80"></rect>
+        <g transform="translate(12, 12)" fill="#FFFFFF">
+            <!-- API Gateway icon: two connected endpoints with arrows -->
+            <!-- Left endpoint (client) -->
+            <rect x="2" y="22" width="14" height="12" rx="2" opacity="0.9"/>
+            <!-- Right endpoint (backend) -->
+            <rect x="40" y="22" width="14" height="12" rx="2" opacity="0.9"/>
+            <!-- Center gateway box -->
+            <rect x="19" y="18" width="18" height="20" rx="3"/>
+            <!-- Arrows left to center -->
+            <line x1="16" y1="26" x2="19" y2="26" stroke="#FFFFFF" stroke-width="1.5"/>
+            <polygon points="18,24 21,26 18,28" fill="#FFFFFF"/>
+            <!-- Arrows center to right -->
+            <line x1="37" y1="26" x2="40" y2="26" stroke="#FFFFFF" stroke-width="1.5"/>
+            <polygon points="39,24 42,26 39,28" fill="#FFFFFF"/>
+            <!-- Gateway label lines -->
+            <line x1="22" y1="23" x2="34" y2="23" stroke="rgba(0,0,0,0.4)" stroke-width="1.2"/>
+            <line x1="22" y1="26" x2="34" y2="26" stroke="rgba(0,0,0,0.4)" stroke-width="1.2"/>
+            <line x1="22" y1="29" x2="34" y2="29" stroke="rgba(0,0,0,0.4)" stroke-width="1.2"/>
+            <line x1="22" y1="32" x2="34" y2="32" stroke="rgba(0,0,0,0.4)" stroke-width="1.2"/>
+            <!-- Bottom: REST / WebSocket labels suggestion -->
+            <text x="28" y="50" text-anchor="middle" font-size="7" font-family="Arial" fill="#FFFFFF" font-weight="bold">API GW</text>
+        </g>
+    </g>
+</svg>

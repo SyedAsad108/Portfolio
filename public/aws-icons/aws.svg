@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- AWS General / "Arch_AWS-General" style icon with smile logo -->
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#232F3E" x="0" y="0" width="80" height="80" rx="6"/>
+        <!-- AWS text -->
+        <text x="40" y="36" text-anchor="middle" font-size="18" font-family="Arial Black, Arial" fill="#FF9900" font-weight="900" letter-spacing="-1">AWS</text>
+        <!-- Smile arrow -->
+        <path d="M22,46 Q40,58 58,46" stroke="#FF9900" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <polygon points="55,42 60,46 56,50" fill="#FF9900"/>
+    </g>
+</svg>
