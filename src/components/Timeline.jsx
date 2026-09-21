@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Calendar, ExternalLink, ChevronDown, ChevronUp, Cpu, Shield, MessageSquare, MapPin } from 'lucide-react';
+import { Calendar, ExternalLink, ChevronDown, Cpu, Shield, MessageSquare, MapPin, Activity, Workflow } from 'lucide-react';
 
 const Github = ({ size = 16, ...props }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
@@ -13,6 +13,44 @@ const Github = ({ size = 16, ...props }) => (
 
 // Reverse-chronological order
 const timelineProjects = [
+  {
+    id: 'incident-graph',
+    title: 'IncidentGraph',
+    subtitle: 'AI-Assisted Incident Investigation Platform',
+    date: 'Sep 2026',
+    icon: <Activity size={20} />,
+    color: '#c084fc',
+    gradient: 'linear-gradient(135deg, rgba(192,132,252,0.15), rgba(192,132,252,0.03))',
+    tags: ['Next.js', 'TypeScript', 'AWS Lambda', 'CloudWatch', 'EventBridge', 'DynamoDB', 'Bedrock', 'Gemini', 'Terraform'],
+    description:
+      'AI-assisted incident investigation and correlation platform for cloud-native distributed systems, combining AWS observability, service topology, deterministic evidence correlation, and AI reasoning.',
+    bullets: [
+      'Engineered automated incident detection and routing using CloudWatch alarms and EventBridge event buses',
+      'Implemented deterministic multi-dimensional correlation across metrics, logs, deployments, topology, and history',
+      'Built evidence-grounded AI investigation workflows powered by Amazon Bedrock and Google Gemini',
+      'Designed config-driven workload architecture with failure injection and load testing via IncidentGraph Lab',
+    ],
+    github: 'https://github.com/SyedAsad108/IncidentGraph',
+  },
+  {
+    id: 'videotube-devops',
+    title: 'VideoTube DevOps',
+    subtitle: 'Cloud Infrastructure & CI/CD Platform',
+    date: 'Sep 2026',
+    icon: <Workflow size={20} />,
+    color: '#2dd4bf',
+    gradient: 'linear-gradient(135deg, rgba(45,212,191,0.15), rgba(45,212,191,0.03))',
+    tags: ['React.js', 'Node.js', 'Express.js', 'Docker', 'Amazon ECS', 'Amazon ECR', 'S3', 'CloudFront', 'Terraform', 'GitHub Actions'],
+    description:
+      'Full-stack video platform deployed on AWS with Terraform-managed infrastructure and an automated GitHub Actions CI/CD pipeline.',
+    bullets: [
+      'Architected automated GitHub Actions CI/CD pipeline with AWS OIDC authentication and path-based change detection',
+      'Containerized Express.js backend with Docker and deployed zero-downtime rolling updates to Amazon ECS via ECR',
+      'Configured static frontend hosting with Amazon S3 and CloudFront CDN distribution with automated cache invalidation',
+      'Provisioned and managed end-to-end cloud infrastructure using modular Terraform Infrastructure as Code (IaC)',
+    ],
+    github: 'https://github.com/SyedAsad108/videotube-devops',
+  },
   {
     id: 'autoforge',
     title: 'AutoForge',
@@ -302,7 +340,7 @@ const TimelineItem = ({ project, index }) => {
   );
 };
 
-const MobileTimelineItem = ({ project, index }) => {
+const MobileTimelineItem = ({ project }) => {
   const [ref, inView] = useInView({ threshold: 0.15, triggerOnce: true });
   
   return (
@@ -411,7 +449,7 @@ const Timeline = () => {
               left: '50%',
               width: 2,
               transform: 'translateX(-50%)',
-              background: 'linear-gradient(180deg, #38bdf8, #818cf8, #34d399, #fb923c)',
+              background: 'linear-gradient(180deg, #c084fc, #2dd4bf, #38bdf8, #818cf8, #34d399, #fb923c)',
               borderRadius: 99,
               zIndex: 1,
             }}
@@ -435,14 +473,14 @@ const Timeline = () => {
             className="absolute left-0 top-0"
             style={{
               width: 2,
-              background: 'linear-gradient(180deg, #38bdf8, #818cf8, #34d399, #fb923c)',
+              background: 'linear-gradient(180deg, #c084fc, #2dd4bf, #38bdf8, #818cf8, #34d399, #fb923c)',
               borderRadius: 99,
             }}
           />
 
           <div className="space-y-10 w-full">
-            {timelineProjects.map((project, i) => (
-              <MobileTimelineItem key={project.id} project={project} index={i} />
+            {timelineProjects.map((project) => (
+              <MobileTimelineItem key={project.id} project={project} />
             ))}
           </div>
         </div>
