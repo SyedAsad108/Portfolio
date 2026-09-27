@@ -34,7 +34,7 @@ const projects = [
     gradient: 'linear-gradient(135deg, rgba(192,132,252,0.15), rgba(192,132,252,0.03))',
     tags: ['Next.js', 'AWS Lambda', 'CloudWatch', 'EventBridge', 'DynamoDB', 'Gemini', 'Bedrock', 'Terraform'],
     description:
-      'AI-assisted, project-agnostic incident investigation platform connecting telemetry, service dependencies, deployment records, and runbooks to guide engineers through an evidence-driven diagnosis workflow.',
+      'Built an event-driven incident investigation engine that automatically collects and correlates AWS telemetry, deployment changes, and service dependencies after an alarm, then uses an LLM to summarize the evidence and guide diagnosis',
     bullets: [
       'Detects incidents via CloudWatch alarms and EventBridge, retrieving supporting diagnostics through AWS APIs',
       'Correlates multi-dimensional evidence into diagnostic timelines, topology graphs, and suggested next steps',
